@@ -38,6 +38,7 @@ root.title("Guess the Number Game")
 tk.Label(root, text="I'm thinking of a number between 1 and 10.").pack(pady=10)
 entry = tk.Entry(root)
 entry.pack(pady=5)
+entry.focus()  # 👈 This sets focus to the entry box
 
 tk.Button(root, text="Guess", command=check_guess).pack(pady=5)
 feedback_label = tk.Label(root, text="")
