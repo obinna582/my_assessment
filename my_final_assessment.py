@@ -8,11 +8,12 @@ secret_number = random.randint(1, 10)
 print("Welcome to the Guess the Number Game!")
 print("I'm thinking of a number between 1 and 10.")
 
-# Ask the user to guess
-guess = int(input("Take a guess: "))
-
-# Check the guess
-if guess == secret_number:
-    print("🎉 You guessed it! Well done!")
-else:
-    print(f"❌ Nope! The number was {secret_number}. Better luck next time!")
+# Loop until the user guesses correctly
+while True:
+    guess = int(input("Take a guess: "))
+    
+    if guess == secret_number:
+        print("🎉 You guessed it! Well done!")
+        break
+    else:
+        print("❌ Nope! Try again.")
